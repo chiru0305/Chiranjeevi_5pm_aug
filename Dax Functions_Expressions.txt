@@ -1,0 +1,44 @@
+Full Aggregation: 
+
+Total:  SUM: Sum(tablename[colname])
+Note: Function starts with (, ends with )
+         Column name between [ and ]
+Average:AVERAGE: AVERAGE(tablename[colname])
+Count: COUNT: COUNT(tablename[columnname])
+============================================================
+Conditional Aggregation:
+
+CALCULATE: CALCULATE(expression or aggregation, condition)
+Ex: HYD total
+CALCULATE(sum(tablename[coluname]),tablename[columnname]="HYD")
+
+Sales Department Average
+
+CALCULATE(average(tablename[coluname]),tablename[columnname]="Sales")
+=============================================================
+Growth= Current-Last
+Ex: Current year =30000  Last year=20000   Growth=30000-20000=10000
+==============================================================
+Year Growth=Current Year-Last Year
+Current Year=Sum(Tablename[Colunnanme])
+Last year=Calculate(sum(tablename[columnname]), previousyear(dimdate[date]))
+
+Growth=Current Year-Last Year
+==============================================================
+Add Columns: Add columns to the given table: Addcolumns(Tablename, columnname, expression, columnnanme, expression...)
+Calendar: Generate a calendar of values between given dates.
+====================================================================================
+
+
+Modeling Menu-> New Table--> Write the below formula
+DimDate=Addcolumns(Calendar("2017-01-01","2021-12-31"),"Year",year([Date]),"Quarter",Quarter([date]),"Month",Month([Date]),"Day",Day([Date]))
+
+
+
+
+
+
+
+
+
+
