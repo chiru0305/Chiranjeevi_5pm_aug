@@ -1,4 +1,6 @@
-Full Aggregation: 
+DAX Function expression"
+
+Full Aggregation:
 
 Total:  SUM: Sum(tablename[colname])
 Note: Function starts with (, ends with )
